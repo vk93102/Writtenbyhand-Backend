@@ -203,7 +203,9 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 
 # API Keys from environment
-SEARCHAPI_KEY = os.getenv('SEARCHAPI_KEY', '')
+# Use SEARCHAPI_KEY as primary (SearchAPI.io), with SERP_API_KEY as fallback
+# Both are set to SearchAPI.io key for production
+SEARCHAPI_KEY = os.getenv('SEARCHAPI_KEY') or os.getenv('SERP_API_KEY', '')
 SERP_API_KEY = os.getenv('SERP_API_KEY', '')
 YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY', '')
 FIRECRAWL_API_KEY = os.getenv('FIRECRAWL_API_KEY', '')
