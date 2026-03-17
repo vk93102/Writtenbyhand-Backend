@@ -143,8 +143,11 @@ WSGI_APPLICATION = 'edtech_project.wsgi.application'
 
 
 # Database
+DATABASE_URL = os.getenv('DATABASE_URL') or os.getenv('SUPABASE_URL')
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('SUPABASE_URL'))
+    'default': dj_database_url.config(
+        default=DATABASE_URL or f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+    )
 }
 
 

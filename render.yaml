@@ -15,8 +15,6 @@ services:
         value: false
       - key: SECRET_KEY
         value: 4f5e2bac434c38bcf80b3f71df16ad50
-      - key: SUPABASE_URL
-        value: postgresql://postgres.vuuitrhrnlhvtfssgikl:54G7qr8faBFuXvqK@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres
       - key: BING_SEARCH_API_KEY
         value: BU6Jztgz9McNbMT8Vo9UwTfT
       - key: SERP_API_KEY
