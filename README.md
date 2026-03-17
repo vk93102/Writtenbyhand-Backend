@@ -31,6 +31,9 @@
 - [Setup & Local Development](#-setup--local-development)
 - [Environment Variables](#-environment-variables)
 - [Deployment](#-deployment)
+- [CI / CD Pipeline](#-ci--cd-pipeline)
+- [Containerization](#-containerization)
+- [Testing Strategy](#-testing-strategy)
 - [Contributing](#-contributing)
 
 ---
@@ -568,6 +571,74 @@ sudo systemctl restart gunicorn
 # Reload Nginx
 sudo nginx -s reload
 ```
+
+---
+
+## 🔁 CI / CD Pipeline
+
+GitHub Actions pipeline is now configured end-to-end.
+
+Workflow file:
+- .github/workflows/ci-cd.yml
+
+### CI steps
+- Install dependencies
+- Run lint checks (`ruff` critical rules)
+- Validate deploy configuration
+- Run Python unit tests
+- Run Django smoke check
+- Build Docker image in CI
+
+### CD step
+- On push to `master` or `main`, deployment is triggered on Render using deploy hook (if configured)
+
+### Required GitHub Secret for CD
+- `RENDER_DEPLOY_HOOK_URL`
+
+### Local CI command
+
+```bash
+./tests/ci_pipeline.sh
+```
+
+---
+
+## 🐳 Containerization
+
+Containerization is included for consistent local and CI environments.
+
+- Docker image definition: Dockerfile
+- Local multi-service setup: docker-compose.yml
+- Build context cleanup: .dockerignore
+
+Run locally with Docker:
+
+```bash
+docker compose up --build
+```
+
+This starts:
+- Backend at `http://localhost:8000`
+- PostgreSQL at `localhost:5432`
+- Redis at `localhost:6379`
+
+---
+
+## 🧪 Testing Strategy
+
+Current strategy is layered:
+
+1. **Config and structure tests**
+  - Environment and project shape checks in `tests/test_*.py`
+2. **Pipeline tests**
+  - `tests/ci_pipeline.sh` runs deploy checks, unit tests, smoke checks
+3. **Endpoint flow scripts**
+  - Shell-based flow checks in `tests/*.sh` for key API paths
+
+Planned improvement areas:
+- Add mocked service tests (e.g., external APIs, payment webhooks)
+- Add focused edge-case tests for document/PDF flows
+- Add coverage reporting and thresholds in CI
 
 ---
 

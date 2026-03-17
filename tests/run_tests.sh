@@ -17,7 +17,7 @@ if [[ -z "$PY_BIN" ]]; then
 	exit 1
 fi
 
-echo "Running unit tests from ./test ..."
-"$PY_BIN" -m unittest discover -s test -p "test_*.py" -v
+echo "Running unit tests from ./tests ..."
+"$PY_BIN" -m unittest discover -s tests -p "test_*.py" -v
 
 echo "All tests completed."
