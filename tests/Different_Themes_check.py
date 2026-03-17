@@ -4,8 +4,8 @@ Test daily quiz endpoint on production Render deployment
 """
 import requests
 import json
-from datetime import datetimexw
-x
+from datetime import datetime
+
 BASE_URL = "https://ed-tech-backend-tzn8.onrender.com/api/quiz"
 USER_ID = f"test_prod_user_{int(datetime.now().timestamp())}"
 
