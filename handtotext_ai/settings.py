@@ -1,5 +1,5 @@
 """
-Django settings for edtech_project project.
+Django settings for handtotext_ai project.
 """
 
 from pathlib import Path
@@ -121,7 +121,7 @@ CORS_EXPOSE_HEADERS = [
     'X-CSRFToken',
 ]
 
-ROOT_URLCONF = 'edtech_project.urls'
+ROOT_URLCONF = 'handtotext_ai.urls'
 
 TEMPLATES = [
     {
@@ -139,7 +139,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'edtech_project.wsgi.application'
+WSGI_APPLICATION = 'handtotext_ai.wsgi.application'
 
 
 # Database

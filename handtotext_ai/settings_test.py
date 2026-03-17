@@ -52,7 +52,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-ROOT_URLCONF = 'edtech_project.urls'
+ROOT_URLCONF = 'handtotext_ai.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'edtech_project.wsgi.application'
+WSGI_APPLICATION = 'handtotext_ai.wsgi.application'
 
 
 # Database - Use SQLite for testing

@@ -1,5 +1,5 @@
 """
-ASGI config for edtech_project project.
+ASGI config for handtotext_ai project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,7 @@ import os
 import socketio
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "edtech_project.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "handtotext_ai.settings")
 
 # Initialize Django ASGI application early
 django_asgi_app = get_asgi_application()

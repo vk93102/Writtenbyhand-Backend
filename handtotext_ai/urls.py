@@ -1,5 +1,5 @@
 """
-URL configuration for edtech_project
+URL configuration for handtotext_ai
 """
 from django.contrib import admin
 from django.urls import path, include

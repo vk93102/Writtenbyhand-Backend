@@ -1,12 +1,12 @@
 services:
   - type: web
-    name: ed-tech-backend
+    name: handtotext-ai-backend
     runtime: python3
     buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --no-input
     startCommand: python manage.py runserver 0.0.0.0:$PORT
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: edtech_project.settings
+        value: handtotext_ai.settings
       - key: PYTHON_VERSION
         value: 3.13.4
       - key: POETRY_VERSION
@@ -40,5 +40,5 @@ services:
       - key: RAZORPAY_ACCOUNT_NUMBER
         value: 2323230099506802
       - key: ALLOWED_HOSTS
-        value: ed-tech-backend-tzn8.onrender.com,localhost,127.0.0.1
+        value: handtotext-ai-backend.onrender.com,localhost,127.0.0.1
     plan: free
