@@ -4,7 +4,14 @@ from rest_framework import status
 from django.db import transaction
 from datetime import date
 from .static_questions_bank import get_random_questions
-from .models import UserCoins, CoinTransaction, QuizSettings
+from .models import (
+    UserCoins,
+    CoinTransaction,
+    QuizSettings,
+    DailyQuiz,
+    DailyQuestion,
+    UserDailyQuizAttempt,
+)
 import logging
 import random
 import uuid

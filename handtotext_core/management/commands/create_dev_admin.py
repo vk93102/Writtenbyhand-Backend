@@ -48,4 +48,3 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS("Superuser created or updated successfully."))
         self.stdout.write(self.style.SUCCESS(f"Username: {username}"))
         self.stdout.write(self.style.SUCCESS(f"Password: {password}"))
-*** End Patch
