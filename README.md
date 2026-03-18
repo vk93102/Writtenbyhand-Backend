@@ -40,8 +40,8 @@
 
 ## 🔗 Project Links
 
-- Frontend Repository: https://github.com/vk93102/HandtotextAI-Frontend
-- Backend Repository: https://github.com/vk93102/HandtotextAI-Backend
+- Frontend Repository: https://github.com/vk93102/Writtenbyhand-Frontend
+- Backend Repository: https://github.com/vk93102/Writtenbyhand-Backend
 - Demo Video: https://drive.google.com/file/d/1wkw9F5njJeNiZ_bltCMBCbArgOQmcg1q/view?usp=sharing
 
 ## 🧩 Backend Repository Note

@@ -9,8 +9,8 @@ class TestReadmeProjectLinks(unittest.TestCase):
 
     def test_required_links_present(self):
         content = self.readme.read_text(encoding="utf-8")
-        self.assertIn("https://github.com/vk93102/HandtotextAI-Frontend", content)
-        self.assertIn("https://github.com/vk93102/HandtotextAI-Backend", content)
+        self.assertIn("https://github.com/vk93102/Writtenbyhand-Frontend", content)
+        self.assertIn("https://github.com/vk93102/Writtenbyhand-Backend", content)
         self.assertIn("https://drive.google.com/file/d/1wkw9F5njJeNiZ_bltCMBCbArgOQmcg1q/view?usp=sharing", content)
 
 
